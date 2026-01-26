@@ -1,98 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ndfavicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="ndfavicon.ico" type="image/x-icon" />
-    <title>Neha Dhull</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
-        }
-        .header {
-            position: absolute;
-            top: 70px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 42pt;
-            font-weight: bold;
-        }
-        .categories {
-            position: absolute;
-            top: 160px; /* Default top value */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-        }
-        .category a {
-            min-width: 250px;
-            text-decoration: none;
-            display: block;
-            padding: 15px 15px;
-            font-size: 20pt;
-            border-radius: 5px;
-            color: white;
-            text-align: center;
-            width: 220px;
-            margin: 10px auto;
-            background-color: #007BFF;
-        }
-        .category a:first-child {
-            background-color: #ff1495;
-        }
-        .category a:hover {
-            filter: brightness(120%);
-        }
-
-        /* Mobile screens */
-        @media (max-width: 768px) {
-            .categories {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .header {
-                font-size: 32pt;
-                top: 12%;
-                width: 100%;
-            }
-        }
-        /* Laptop screens */
-        @media (min-width: 769px) and (max-width: 1300px) {
-            .categories {
-                top: 150px; /* Adjusted top value for laptop screens */
-            }
-        }
-
-        /* Larger monitors */
-        @media (min-width: 1301px) {
-            .categories {
-                top: 200px;
-            }
-        }
-    </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Neha Dhull</title>
+  <link rel="icon" type="image/png" href="./assets/ndfavicon.ico">
+  <link rel="stylesheet" href="./assets/style.css"/>
 </head>
-<body>
-    <div class="header">Neha Dhull</div>
-    <div class="categories">
-        <div class="category">
-            <a href="projects/projects.html">Papers</a>
-            <a href="https://www.linkedin.com/in/neha-dhull-234360178/">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=_oXUSeQAAAAJ&hl=en">Google Scholar</a>
-            <a href="https://github.com/nehadhull11">GitHub</a>
-            <a href="about.html">About</a>
+
+<body data-page="home">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img class="brand-icon" src="./assets/ndfavicon.ico" alt="" />
         </div>
+      </a>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-nav="years" href="papers.html">PAPERS</a>
+        <a class="nav-link" data-nav="years" href="https://scholar.google.com/citations?user=_oXUSeQAAAAJ&hl=en">GOOGLE SCHOLAR</a>
+        <a class="nav-link" data-nav="years" href="https://www.linkedin.com/in/neha-dhull-234360178/">LINKEDIN</a>
+        <a class="nav-link" data-nav="about" href="./about.html">ABOUT</a>
+      </nav>
     </div>
-</body>
-</html>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="stars" aria-hidden="true">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .6-5.3 4.6 1.7 7-6.4-3.8L6.3 21l1.7-7L2.7 9.6 10 9l2-7z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .6-5.3 4.6 1.7 7-6.4-3.8L6.3 21l1.7-7L2.7 9.6 10 9l2-7z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .6-5.3 4.6 1.7 7-6.4-3.8L6.3 21l1.7-7L2.7 9.6 10 9l2-7z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .6-5.3 4.6 1.7 7-6.4-3.8L6.3 21l1.7-7L2.7 9.6 10 9l2-7z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .6-5.3 4.6 1.7 7-6.4-3.8L6.3 21l1.7-7L2.7 9.6 10 9l2-7z"/></svg>
+        </div>
+
+        <h1 class="h-serif">
+          Neha Dhull<br/>
+        </h1>
+
+        <p>
+          See recent <a href="./papers.html" class="inline-link"><i>papers</i></a> here.
+        </p>
+
+        <div class="hero-actions">
+          <a id="home-primary" href="papers.html"></a>
+
