@@ -1269,3 +1269,56 @@ a{ color:inherit; text-decoration:none; }
     aspect-ratio: 1 / 1;
   }
 }
+
+/* --- ABOUT PAGE: 3-photo asymmetric layout --- */
+
+.about-split{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Photos block */
+.about-photos{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 18px;
+}
+
+/* Left column stack */
+.photo-stack{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Base photo style */
+.about-photo{
+  width: 240px;               /* controls ALL photo widths */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.about-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tall photo = double height */
+.about-photo.tall{
+  aspect-ratio: 1 / 2.05;     /* visually matches two stacked squares */
+}
+
+/* Photo 4: move image up slightly */
+.about-photos .photo-stack .about-photo:nth-child(2) img {
+  object-position: center 0%;
+}
+
+/* Photo 3 (tall): move image slightly right */
+.about-photos .about-photo.tall img {
+  object-position: 75% center;
+}
