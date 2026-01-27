@@ -1241,3 +1241,31 @@ a{ color:inherit; text-decoration:none; }
     font-size: 46px;
   }
 }
+
+/* --- MOBILE: bio first, photos below in 2x2 --- */
+@media (max-width: 900px){
+  .about-split{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Bio first */
+  .about-bio{
+    order: 1;
+  }
+
+  /* Photos second */
+  .about-photos{
+    order: 2;
+    margin-top: 28px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Keep photos square */
+  .about-photo{
+    aspect-ratio: 1 / 1;
+  }
+}
